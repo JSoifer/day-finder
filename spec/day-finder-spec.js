@@ -1,4 +1,4 @@
-import { getInputtedDate } from './../src/business.js';
+import { getInputtedDate, switchTest } from './../src/business.js';
 
 describe( 'getInputtedDate', function() {
 
@@ -8,4 +8,12 @@ describe( 'getInputtedDate', function() {
     console.log(result);
     expect(result).toEqual(0);
   });
+});
+describe('switchTest', function() {
+  it('should take 0-6 numbers and translate that into a date M-S', function() {
+    let day = 0;
+    let switchResult = switchTest(day);
+    expect(switchResult).toEqual("Monday");
+  });
+
 });
